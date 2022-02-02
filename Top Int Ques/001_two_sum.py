@@ -29,3 +29,18 @@ class Solution(object):
                 result = [i, nums.index(j)]
                    
         return result
+
+    class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        result = {}
+        
+        for i in range(0, len(nums)):
+            j = target - nums[i]
+            if j in result:
+                return [i, result[j]]
+            result[nums[i]] = i
